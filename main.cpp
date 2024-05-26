@@ -5,7 +5,6 @@
 #include <ctime>
 #include <string>
 
-// Определение пути к ресурсам
 #define RESOURCES_DIR "./resources/"
 
 class Sprite {
@@ -102,7 +101,7 @@ private:
     int speed;
     SDL_Renderer* renderer;
     SDL_Rect rect;
-    Sprite sprite; // Sprite для отображения
+    Sprite sprite; // Sprite пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     bool stopped;
     int stopTime;
@@ -161,7 +160,7 @@ public:
                 handleEvents();
                 update();
                 render();
-                SDL_Delay(16); // Ограничение FPS до примерно 60
+                SDL_Delay(16); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FPS пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 60
             }
         }
     }
@@ -248,7 +247,7 @@ private:
     }
 
     void render() {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Черный цвет
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         SDL_RenderClear(renderer);
 
         for (const auto& cockroach : cockroaches) {
@@ -261,13 +260,13 @@ private:
     }
 
     void renderStartScreen() {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Черный цвет
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         SDL_RenderClear(renderer);
 
         // Render buttons for number of players
         for (int i = 0; i < 5; ++i) {
             SDL_Rect buttonRect = { 50, 50 + i * 60, 200, 50 };
-            SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Зеленый цвет
+            SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
             SDL_RenderFillRect(renderer, &buttonRect);
             renderText("Players: " + std::to_string(i + 1), 60, 60 + i * 60);
         }
@@ -280,7 +279,7 @@ private:
 
         // Render start button
         SDL_Rect buttonRect = { 350, 500, 100, 50 };
-        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Зеленый цвет
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         SDL_RenderFillRect(renderer, &buttonRect);
         renderText("Start Game", 360, 510);
 
@@ -296,7 +295,7 @@ private:
     void renderText(const std::string& message, int x, int y) {
         // Here we simply draw rectangles to simulate text rendering
         SDL_Rect rect = { x, y, static_cast<int>(message.size() * 10), 20 };
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Белый цвет
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         SDL_RenderFillRect(renderer, &rect);
     }
 
